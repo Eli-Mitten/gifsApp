@@ -1,8 +1,11 @@
 <div class="bg-dark border-right p-3" id="sidebar">
     <h3 class="text-light">Gifts App</h3>
     <hr class="text-white">
-    <div *ngFor="let item of searchHistory" class="list-group list-reset">
-        <a href="#" class="list-group-item list-group-action mb-1">
+    <div  class="list-group list-reset">
+        <a *ngFor="let item of searchHistory"
+            (click)="search( item )"
+            href="#" 
+            class="list-group-item list-group-action mb-1">
             {{ item | titlecase }}
         </a>
 
